@@ -1,60 +1,60 @@
 # Parallel SSH (PSSH)
 
-PSSH (Parallel SSH) 是一个用于在多个远程主机上并行执行命令的工具集。它提供了OpenSSH和相关工具的并行版本，包括pssh、pscp、prsync、pnuke和pslurp。
+PSSH (Parallel SSH) is a tool set for executing commands in parallel on multiple remote hosts. It provides parallel versions of OpenSSH and related tools, including pssh, pscp, prsync, pnuke, and pslurp.
 
-## 功能特点
+## Features
 
-- 并行执行SSH命令
-- 并行文件传输
-- 支持密码认证和密钥认证
-- 支持自定义超时和并行度
-- 支持输出重定向
-- 支持彩色输出
+- Parallel execution of SSH commands
+- Parallel file transfers
+- Support password authentication and key authentication
+- Support custom timeout and parallelism
+- Support output redirection
+- Support color output
 
-## 系统要求
+## System requirements
 
-- Python 3.6 或更高版本
-- OpenSSH 客户端
+- Python 3.6 or higher
+- OpenSSH client
 
-## 安装
+## Install
 
 ```bash
-# 从源码安装
+# Install from source
 python3 setup.py install
 ```
 
-## 使用方法
+## How to use
 
-### 1.常用选项
+### 1.Common options
 
-- `-h, --hosts`: 指定主机列表文件
-- `-H, --host`: 指定单个主机
-- `-l, --user`: 指定用户名
-- `-p, --par`: 设置并行度
-- `-t, --timeout`: 设置超时时间（秒）
-- `-o, --outdir`: 指定标准输出目录
-- `-e, --errdir`: 指定标准错误输出目录
-- `-A, --askpass`: 启用密码认证
-- `-i, --inline`: 内联显示每个服务器的输出
-- `-P, --print`: 实时打印输出
+- `-h, --hosts`: Specify a host list file
+- `-H, --host`: Specify a single host
+- `-l, --user`: Specify a username
+- `-p, --par`: Set parallelism
+- `-t, --timeout`: Set timeout in seconds
+- `-o, --outdir`: Specify a standard output directory
+- `-e, --errdir`: Specify a standard error output directory
+- `-A, --askpass`: Enable password authentication
+- `-i, --inline`: Display each server's output inline
+- `-P, --print`: Print output in real time
 
-### 2. 环境变量
+### 2. Environment variables
 
-- `PSSH_USER`: 默认用户名
-- `PSSH_PAR`: 默认并行度
-- `PSSH_OUTDIR`: 默认输出目录
-- `PSSH_ERRDIR`: 默认错误输出目录
-- `PSSH_TIMEOUT`: 默认超时时间
-- `PSSH_VERBOSE`: 启用详细输出
-- `PSSH_ASKPASS`: 启用密码认证
+- `PSSH_USER`: default username
+- `PSSH_PAR`: default parallelism
+- `PSSH_OUTDIR`: default output directory
+- `PSSH_ERRDIR`: default error output directory
+- `PSSH_TIMEOUT`: default timeout
+- `PSSH_VERBOSE`: enable verbose output
+- `PSSH_ASKPASS`: enable password authentication
 
-## 注意事项
+## Precautions
 
-1. 确保目标主机可以通过SSH访问
-2. 建议使用SSH密钥认证以提高安全性
-3. 合理设置并行度，避免对目标主机造成过大负载
-4. 使用超时选项避免命令长时间挂起
+1. Ensure that the target host is accessible via SSH
+2. It is recommended to use SSH key authentication to improve security
+3. Set the parallelism appropriately to avoid excessive load on the target host
+4. Use the timeout option to avoid long-term command suspension
 
-## 许可证
+## license
 
 BSD License 
